@@ -1,0 +1,601 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .navbar {
+    padding: 30px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: transparent; /* Tetap sesuai dengan warna asli */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Tambahan bayangan untuk estetika */
+    transition: background-color 0.3s ease; /* Transisi untuk perubahan warna jika diperlukan */
+  }
+
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+  }
+  
+  .menu li a:hover {
+    color: #FCC737;
+    font-weight: bold;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 18px;
+  }
+  
+  .actions .icon img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s;
+  }
+  
+  .actions .icon img:hover {
+    transform: scale(1.2);
+  }
+
+  /* Responsif Navbar untuk layar kecil */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    display: none; /* Sembunyikan menu awal */
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .navbar .toggle-menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+  body {
+    font-family: ubuntu, sans-serif;
+    background-color: #213555;
+  }
+
+  .hero {
+    padding: 50px 10px 50px 50px;
+    background-color: #213555;
+    color: #fff;
+  }
+  
+  .hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1390px;
+    margin: 0 auto;
+  }
+  
+  .hero-text {
+    max-width: 50%;
+  }
+  
+  .hero-text h2 {
+    font-size: 45px;
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+  
+  .hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+  }
+  
+  .hero-text h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 100;
+    color: #DCDCDC;
+  }
+  
+  .hero-text h5 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #FFEE8B;
+    margin-bottom: 55px;
+  }
+  
+  .hero-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .hero-text h6{
+    margin-bottom: 20px;
+  }
+  .cv-download {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  
+  .cv-download .highlight {
+    color: #ffcc00;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .cv-download .highlight:hover {
+    color: #82dd37;
+  }
+  
+  .lets-talk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: #FCC737;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 60px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+  }
+  
+  .lets-talk:hover {
+    background-color: #E0B62E;
+    transform: scale(1.05);
+  }
+  
+  .whatsapp-icon {
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #37e20c; /* Warna latar belakang */
+    border-radius: 50%;
+    padding: 5px;
+  }
+  /*Responsif hero*/
+  @media (max-width: 768px) {
+    .hero-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-text {
+      max-width: 100%;
+    }
+  
+    .hero-image img {
+      width: 200px;
+      height: 200px;
+      margin: 20px auto;
+    }
+  }
+  
+  /* Section About Me */
+  .about-me {
+    background-color: #3E5879; /* Warna latar belakang khusus untuk About Me */
+    padding: 120px 30px;
+    color: #fff;
+  }
+  
+  .about-me-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+  }
+  
+  .about-me-left {
+    flex: 1;
+    max-width: 30%;
+    padding-left: 40px;
+  }
+
+  .about-me .about-me-left p{
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
+  .about-me-right {
+    flex: 1;
+    max-width: 40%;
+    text-align: left;
+  }
+
+  .about-me.about-me-right p{
+    font-weight: bold;
+    font-size: 25;
+    margin-bottom: 18px;
+  }
+  
+  .about-me h3 {
+    font-size: 28px;
+    color: #FCC737; 
+    margin-bottom: 10px;
+  }
+  
+  .about-me .education {
+    font-size: 20px;
+    color: #FFEE8B; 
+    margin-bottom: 15px;
+  }
+  
+  .about-me .desc-educ {
+    margin-top: 4px;
+    font-size: 18px;
+    color: #E0E0E0; 
+  }
+  
+  .highlight-skills {
+    color: #FFEE8B; 
+    font-weight: bold;
+  }
+  
+  /*Responsif about me*/
+  @media (max-width: 768px) {
+    .about-me-container {
+      flex-direction: column;
+    }
+  
+    .about-me-left, .about-me-right {
+      max-width: 100%;
+      text-align: center;
+      padding-left: 0;
+    }
+  }
+
+  /* Section Skill */
+.skill-section {
+    background-color: #213555; /* Warna latar belakang */
+    padding: 50px 20px;
+    color: #fff;
+  }
+  
+  .skill-container {
+    text-align: center;
+  }
+  
+  .skill-section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #FCC737; 
+  }
+  
+  .skill-logos {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 20px; 
+  }
+  
+  .skill-logos img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain; 
+    transition: transform 0.3s ease;
+  }
+  
+  .skill-logos img:hover {
+    transform: scale(1.1); 
+  }
+  
+  .white-bg {
+    background-color: #ffffff; /* Latar belakang putih */
+    border-radius: 24px; /* Membuat sudut melengkung */
+    padding: 10px; /* Memberikan ruang di dalam latar belakang */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Memberikan efek bayangan */
+  }
+  
+  /* Section Project */
+  .project-section {
+    background-color: #3E5879; /* Warna latar belakang section */
+    padding: 50px 20px;
+    color: #fff;
+  }
+  
+  .project-container {
+    text-align: center;
+  }
+  
+  .project-section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #FCC737; /* Warna judul */
+  }
+
+  /*Responsif Skill*/
+  @media (max-width: 768px) {
+    .skill-logos {
+      gap: 10px;
+    }
+  
+    .skill-logos img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  
+  
+  /* Project List */
+  .project-list {
+    padding-left: 40px;
+    display: flex;
+    flex-direction: row; /* Susun secara horizontal */
+    flex-wrap: nowrap; /* Jangan pindah ke baris baru */
+    gap: 20px; /* Jarak antar container */
+    overflow-x: auto; /* Scroll horizontal jika ruang tidak cukup */
+    padding-bottom: 10px; /* Tambahkan padding agar scroll terlihat */
+  }
+  
+  /* Gaya untuk scrollbar horizontal */
+  .project-list::-webkit-scrollbar {
+    height: 8px; /* Tinggi scrollbar */
+  }
+  
+  .project-list::-webkit-scrollbar-thumb {
+    background: #3E5879; /* Warna scrollbar */
+    border-radius: 4px;
+  }
+  
+  .project-list::-webkit-scrollbar-track {
+    background: #193375; /* Warna latar belakang scrollbar */
+  }
+  
+  /* Container Project */
+  .container-project {
+    width: 500px;
+    height: 330px;
+    display: flex;
+    background-color: #193375; /* Warna latar container */
+    border-radius: 12px; /* Sudut melengkung */
+    overflow: hidden; /* Agar konten tidak keluar */
+    padding: 15px;
+    align-items: center; /* Rata tengah vertikal */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan ringan */
+  }
+  
+  /* Bagian Kiri: Gambar */
+  .project-left {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .project-image {
+    width: 100%;
+    height: auto;
+    max-height: 300px; /* Sesuaikan dengan tinggi container */
+    border-radius: 12px; /* Sudut melengkung gambar */
+    object-fit: cover; /* Menjaga proporsi gambar */
+  }
+  
+  /* Bagian Kanan: Informasi */
+  .project-right {
+    flex: 1;
+    color: #E0E0E0; /* Warna teks */
+    text-align: left;
+    padding-left: 15px;
+  }
+  
+  .project-right h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #FFEE8B; /* Warna judul project */
+  }
+  
+  .project-right h6 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #C0C0C0; /* Warna subjudul */
+  }
+
+  /* Tombol Lihat */
+  .project-right .lihat-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #193375; /* Warna teks tombol */
+  background-color: #FCC737; /* Warna latar belakang tombol */
+  border: none;
+  border-radius: 8px; /* Sudut melengkung tombol */
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none; /* Hilangkan garis bawah */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan ringan */
+  }
+
+  .project-right .lihat-button:hover {
+  background-color: #e0b02f; /* Warna tombol saat hover */
+  color: #fff; /* Warna teks tombol saat hover */
+  transition: background-color 0.3s, color 0.3s; /* Efek transisi */
+  }
+
+  
+  /* Responsivitas Project */
+  @media (max-width: 768px) {
+    .project-list {
+      flex-direction: column;
+      overflow-x: unset;
+    }
+  
+    .container-project {
+      width: 100%;
+      height: auto;
+    }
+  
+    .project-left img {
+      max-height: 200px;
+    }
+  }
+  
+  
+  /* Section Sertifikat */
+.certificate-section {
+  background-color: #213555; /* Warna latar belakang section */
+  padding: 50px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.certificate-section h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #FCC737; /* Warna judul */
+}
+
+/* Layout Sertifikat */
+.certificate-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Jarak antar sertifikat */
+  margin-bottom: 20px; /* Jarak bawah ke tombol */
+}
+
+.certificate-item {
+  width: 250px;
+  height: 180px;
+  overflow: hidden; /* Hilangkan bagian gambar yang keluar */
+  border-radius: 12px; /* Sudut melengkung */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan ringan */
+}
+
+.certificate-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Menjaga proporsi gambar */
+  border-radius: 12px; /* Sesuaikan dengan kontainer */
+}
+
+/* Tombol Lihat Selengkapnya */
+.lihat-selengkapnya {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #193375; /* Warna teks */
+  background-color: #FCC737; /* Warna latar belakang */
+  border-radius: 8px; /* Sudut melengkung */
+  text-decoration: none; /* Hilangkan garis bawah */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan ringan */
+}
+
+.lihat-selengkapnya:hover {
+  background-color: #e0b02f; /* Warna saat hover */
+  color: #fff; /* Warna teks saat hover */
+  transition: background-color 0.3s, color 0.3s; /* Efek transisi */
+}
+
+
+/* Section Contact */
+.contact-section {
+  background-color: #001E45; /* Warna latar belakang */
+  padding: 50px 20px;
+  color: #fff;
+}
+
+.contact-container h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #FCC737; /* Warna judul */
+  text-align: center;
+  margin-bottom: 50px; /* Jarak bawah ke konten */
+}
+
+/* Kontainer untuk Konten */
+.contact-content {
+  padding-left: 50px;
+  padding-right: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px; /* Jarak antara kiri dan kanan */
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+.contact-left,
+.contact-right {
+  flex: 1;
+}
+
+/* Gaya Konten Kiri */
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Jarak antar item */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Jarak antara ikon dan teks */
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* Gaya Konten Kanan */
+.contact-right h4 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.contact-right h5 {
+  text-align: right;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+/*Responsif contact*/
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-left, .contact-right {
+    max-width: 100%;
+    text-align: center;
+  }
+}
