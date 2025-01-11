@@ -1,0 +1,456 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    background-color: #213555;
+    font-family: ubuntu, sans-serif;
+  }
+
+
+  .navbar{
+    padding: 30px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: transparent;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+  }
+  
+  .menu li a:hover {
+    color: #FCC737;
+    font-weight: bold;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 18px;
+  }
+  
+  .actions .icon img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s;
+  }
+  
+  .actions .icon img:hover {
+    transform: scale(1.2);
+  }
+
+  /* Responsif Navbar untuk layar kecil */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    display: none; /* Sembunyikan menu awal */
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .navbar .toggle-menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.hero-project{
+  padding: 50px 50px 50px 50px;
+  background-color: #213555;
+  color: #fff;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1390px;
+  margin: 0 auto;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h2 {
+  font-size: 45px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero-text h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 100;
+  color: #FFEE8B;
+}
+
+.hero-image-project img {
+  width: 100%;
+  height: auto;
+  max-height: 400px; /* Sesuaikan dengan tinggi container */
+  border-radius: 12px; /* Sudut melengkung gambar */
+  object-fit: cover; /* Menjaga proporsi gambar */
+}
+
+/*Responsif hero project*/
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-image-project img {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+  }
+}
+
+.about-project{
+  background-color: #3E5879; /* Warna latar belakang khusus untuk About Me */
+  padding: 120px 30px;
+  color: #fff;
+}
+
+.about-project-container{
+  text-align: center;
+  align-items: center;
+}
+
+.desc-project p{
+  line-height: 1.6;
+  text-align: center;
+  font-size: 20px;
+}
+
+.about-project h2{
+  font-size: 28px;
+  color: #FCC737;
+  margin-bottom: 25px;
+}
+
+.highlight-project{
+  font-size: 20px;
+  color: #FFEE8B; 
+  margin-bottom: 15px;
+}
+
+/*Responsif about project*/
+@media (max-width: 768px) {
+  .about-proje-container {
+    flex-direction: column;
+  }
+
+  .desc-project {
+    max-width: 100%;
+    text-align: center;
+    padding-left: 0;
+  }
+}
+
+.integration-data-section {
+  background-color: #213555; /* Warna latar belakang */
+  padding: 50px 20px;
+  color: #fff;
+  display: flex; /* Agar konten terpusat */
+  justify-content: center; /* Pusatkan secara horizontal */
+  align-items: center; /* Pusatkan secara vertikal */
+}
+
+.integration-data-container {
+  max-width: 1200px; /* Batas maksimum lebar kontainer */
+  width: 100%; /* Kontainer mengambil seluruh lebar layar */
+  display: flex; /* Fleksibel agar mudah diatur */
+  justify-content: center; /* Konten di tengah */
+  align-items: center;
+}
+
+.integration-data-img img {
+  width: auto; /* Tidak memaksa gambar memenuhi lebar penuh */
+  max-width: 100%; /* Gambar tetap dalam lebar kontainer */
+  max-height: 600px; /* Sesuaikan tinggi maksimum */
+  border-radius: 12px; /* Sudut melengkung gambar */
+  object-fit: contain; /* Memastikan gambar tetap proporsional */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Memberikan efek bayangan */
+}
+
+.visual-data-section{
+  background-color: #3E5879; /* Warna latar belakang */
+  padding: 50px 20px;
+  color: #fff;
+  display: flex; /* Agar konten terpusat */
+  justify-content: center; /* Pusatkan secara horizontal */
+  align-items: center; /* Pusatkan secara vertikal */
+}
+
+.visual-data-container{
+  max-width: 1200px; /* Batas maksimum lebar kontainer */
+  width: 100%; /* Kontainer mengambil seluruh lebar layar */
+  display: flex; /* Fleksibel agar mudah diatur */
+  justify-content: center; /* Konten di tengah */
+  align-items: center;
+}
+
+.visual-data-img img{
+  width: auto; /* Tidak memaksa gambar memenuhi lebar penuh */
+  max-width: 100%; /* Gambar tetap dalam lebar kontainer */
+  max-height: 600px; /* Sesuaikan tinggi maksimum */
+  border-radius: 12px; /* Sudut melengkung gambar */
+  object-fit: contain; /* Memastikan gambar tetap proporsional */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Memberikan efek bayangan */
+}
+
+/* Alur BLoC Section */
+.alur-bloc-section {
+  background-color: #213555; /* Warna latar belakang */
+  padding: 50px 20px; /* Padding luar */
+  color: #fff; /* Warna teks */
+}
+
+.alur-bloc-container {
+  display: flex; /* Layout baris */
+  flex-wrap: wrap; /* Supaya responsif jika layar kecil */
+  justify-content: center; /* Pusatkan isi */
+  align-items: center; /* Tengah vertikal */
+  max-width: 1400px; /* Batas lebar maksimum */
+  margin: 0 auto; /* Tengahkan kontainer */
+}
+
+.alur-bloc-left {
+  flex: 1; /* Bagian kiri mengambil 1 bagian */
+  max-width: 50%; /* Maksimal 50% lebar */
+  display: flex; /* Fleksibel agar konten rata tengah */
+  justify-content: center; /* Tengahkan horizontal */
+  align-items: center; /* Tengahkan vertikal */
+  padding: 10px;
+}
+
+.alur-bloc-left img {
+  width: auto; /* Mempertahankan proporsi gambar */
+  max-width: 100%; /* Responsif untuk lebar */
+  height: auto; /* Responsif untuk tinggi */
+  max-height: 600px; /* Sesuaikan tinggi gambar */
+  border-radius: 12px; /* Sudut melengkung */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+}
+
+.alur-bloc-right {
+  flex: 1; /* Bagian kanan mengambil 1 bagian */
+  max-width: 50%; /* Maksimal 50% lebar */
+  padding: 20px; /* Jarak dalam */
+  text-align: justify; /* Rata kanan-kiri */
+}
+
+.desc-alur {
+  font-size: 16px; /* Ukuran font */
+  line-height: 1.8; /* Jarak antar baris */
+  color: #fff; /* Warna teks */
+}
+
+/* Tambahkan Media Queries */
+@media (max-width: 768px) {
+  .alur-bloc-container {
+    flex-direction: column; /* Susun kolom untuk layar kecil */
+    align-items: center; /* Tengahkan isi */
+  }
+
+  .alur-bloc-left, .alur-bloc-right {
+    max-width: 100%; /* Full width pada layar kecil */
+    padding: 10px; /* Tambah jarak */
+  }
+
+  .desc-alur {
+    font-size: 14px; /* Perkecil teks */
+    line-height: 1.6; /* Jarak antar baris lebih kecil */
+  }
+
+  .alur-bloc-left img {
+    max-height: 300px; /* Batasi tinggi gambar */
+  }
+}
+
+@media (max-width: 480px) {
+  .alur-bloc-section {
+    padding: 30px 10px; /* Kurangi padding pada layar kecil */
+  }
+
+  .desc-alur {
+    font-size: 12px; /* Ukuran teks lebih kecil */
+    line-height: 1.5; /* Jarak antar baris lebih rapat */
+  }
+}
+
+
+.ui-project-section {
+  background-color: #3E5879; /* Warna latar belakang */
+  padding: 50px 20px; /* Padding luar */
+  text-align: center; /* Teks rata tengah */
+  color: #fff; /* Warna teks */
+}
+
+.ui-project-container {
+  max-width: 1400px; /* Batas lebar maksimum */
+  margin: 0 auto; /* Tengahkan kontainer */
+}
+
+.ui-project-title {
+  font-size: 28px; /* Ukuran font judul */
+  margin-bottom: 20px; /* Jarak bawah judul */
+  font-weight: bold; /* Teks tebal */
+  color: #FCC737;
+}
+
+.ui-project-image img {
+  width: auto; /* Mempertahankan proporsi gambar */
+  max-width: 100%; /* Responsif untuk lebar */
+  height: auto; /* Responsif untuk tinggi */
+  max-height: 350px; /* Batas tinggi maksimum */
+  border-radius: 8px; /* Sudut melengkung */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+}
+
+/*demo project section*/
+.demo-project-section {
+  background-color: #213555; /* Warna latar belakang */
+  padding: 50px 20px; /* Padding luar */
+  text-align: center; /* Teks rata tengah */
+  color: #fff; /* Warna teks */
+}
+
+.demo-project-container {
+  max-width: 1400px; /* Batas lebar maksimum */
+  margin: 0 auto; /* Tengahkan kontainer */
+}
+
+.demo-project-title {
+  font-size: 28px; /* Ukuran font judul */
+  margin-bottom: 20px; /* Jarak bawah judul */
+  font-weight: bold; /* Teks tebal */
+  color: #FCC737;
+}
+
+.demo-project-video video {
+  width: auto; /* Mempertahankan proporsi asli */
+  max-width: 100%; /* Responsif untuk lebar */
+  height: auto; /* Responsif untuk tinggi */
+  max-height: 600px; /* Batas tinggi maksimum */
+  border-radius: 8px; /* Sudut melengkung */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+  aspect-ratio: 9 / 16; /* Menjaga orientasi potret (vertikal) */
+}
+
+
+/* Section Contact */
+.contact-section {
+  background-color: #001E45; /* Warna latar belakang */
+  padding: 50px 20px;
+  color: #fff;
+}
+
+.contact-container h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #FCC737; /* Warna judul */
+  text-align: center;
+  margin-bottom: 50px; /* Jarak bawah ke konten */
+}
+
+/* Kontainer untuk Konten */
+.contact-content {
+  padding-left: 50px;
+  padding-right: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px; /* Jarak antara kiri dan kanan */
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+.contact-left,
+.contact-right {
+  flex: 1;
+}
+
+/* Gaya Konten Kiri */
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Jarak antar item */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Jarak antara ikon dan teks */
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* Gaya Konten Kanan */
+.contact-right h4 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.contact-right h5 {
+  text-align: right;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+/*Responsif contact*/
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-left, .contact-right {
+    max-width: 100%;
+    text-align: center;
+  }
+}
