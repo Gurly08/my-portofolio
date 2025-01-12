@@ -10,76 +10,104 @@
   }
 
 
-  .navbar{
-    padding: 30px 50px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: transparent;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-  }
+  /* Navbar */
+.navbar {
+  padding: 30px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: transparent;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
 
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .menu li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 400;
-    font-size: 18px;
-  }
-  
-  .menu li a:hover {
-    color: #FCC737;
-    font-weight: bold;
-  }
-  
-  .actions {
-    display: flex;
-    gap: 18px;
-  }
-  
-  .actions .icon img {
-    width: 35px;
-    height: 35px;
-    transition: transform 0.3s;
-  }
-  
-  .actions .icon img:hover {
-    transform: scale(1.2);
-  }
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  /* Responsif Navbar untuk layar kecil */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.menu li a:hover {
+  color: #FCC737;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  gap: 18px;
+}
+
+.actions .icon img {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.3s;
+}
+
+.actions .icon img:hover {
+  transform: scale(1.2);
+}
+
+/* Tombol Toggle Menu */
+.toggle-menu {
+  display: none; /* Hanya muncul di mobile */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.toggle-menu span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Responsif Navbar untuk layar kecil */
 @media (max-width: 768px) {
   .menu {
     flex-direction: column;
     display: none; /* Sembunyikan menu awal */
+    gap: 15px;
+    background: #213555; /* Warna latar belakang menu */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
   }
 
   .menu.show {
     display: flex;
   }
 
-  .navbar .toggle-menu {
-    display: block;
-    cursor: pointer;
+  .toggle-menu {
+    display: flex;
   }
 
   .actions {
-    flex-direction: column;
-    align-items: flex-end;
+    display: none; /* Opsional, sembunyikan actions di mobile */
   }
 }
+
 
 .hero-project{
   padding: 50px 50px 50px 50px;

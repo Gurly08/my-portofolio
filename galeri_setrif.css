@@ -1,0 +1,693 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    background-color: #213555;
+    font-family: ubuntu, sans-serif;
+  }
+
+  /* Navbar */
+.navbar {
+  padding: 30px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: transparent;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.menu li a:hover {
+  color: #FCC737;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  gap: 18px;
+}
+
+.actions .icon img {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.3s;
+}
+
+.actions .icon img:hover {
+  transform: scale(1.2);
+}
+
+/* Tombol Toggle Menu */
+.toggle-menu {
+  display: none; /* Hanya muncul di mobile */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.toggle-menu span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Responsif Navbar untuk layar kecil */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    display: none; /* Sembunyikan menu awal */
+    gap: 15px;
+    background: #213555; /* Warna latar belakang menu */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .toggle-menu {
+    display: flex;
+  }
+
+  .actions {
+    display: none; /* Opsional, sembunyikan actions di mobile */
+  }
+}
+
+.hero-certificates{
+    padding: 50px 50px 50px 50px;
+    background-color: #213555;
+    color: #fff;
+  }
+  
+  .hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1390px;
+    margin: 0 auto;
+  }
+  
+  .hero-text {
+    max-width: 50%;
+  }
+  
+  .hero-text h2 {
+    font-size: 45px;
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+  
+  .hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+  }
+  
+  .hero-text h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 100;
+    color: #FFEE8B;
+  }
+  
+  .hero-image-certificates img {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Sesuaikan dengan tinggi container */
+    border-radius: 12px; /* Sudut melengkung gambar */
+    object-fit: cover; /* Menjaga proporsi gambar */
+  }
+  
+  /*Responsif hero certificates*/
+  @media (max-width: 768px) {
+    .hero-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-text {
+      max-width: 100%;
+    }
+  
+    .hero-image-certificates img {
+      width: 200px;
+      height: 200px;
+      margin: 20px auto;
+    }
+  }
+
+  /* certificates one Section */
+  .certificates-one-section {
+    background-color: #3E5879; /* Warna latar belakang */
+    padding: 50px 20px; /* Padding luar */
+    color: #fff; /* Warna teks */
+  }
+  
+  .certificates-container {
+    display: flex; /* Layout baris */
+    flex-wrap: wrap; /* Supaya responsif jika layar kecil */
+    justify-content: center; /* Pusatkan isi */
+    align-items: center; /* Tengah vertikal */
+    max-width: 1400px; /* Batas lebar maksimum */
+    margin: 0 auto; /* Tengahkan kontainer */
+  }
+  
+  .certificates-left {
+    flex: 1; /* Bagian kiri mengambil 1 bagian */
+    max-width: 50%; /* Maksimal 50% lebar */
+    display: flex; /* Fleksibel agar konten rata tengah */
+    justify-content: center; /* Tengahkan horizontal */
+    align-items: center; /* Tengahkan vertikal */
+    padding: 10px;
+  }
+  
+  .certificates-left img {
+    width: auto; /* Mempertahankan proporsi gambar */
+    max-width: 100%; /* Responsif untuk lebar */
+    height: auto; /* Responsif untuk tinggi */
+    max-height: 600px; /* Sesuaikan tinggi gambar */
+    border-radius: 12px; /* Sudut melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+  }
+  
+  .certificates-right {
+    flex: 1; /* Bagian kanan mengambil 1 bagian */
+    max-width: 50%; /* Maksimal 50% lebar */
+    padding: 20px; /* Jarak dalam */
+    text-align: justify; /* Rata kanan-kiri */
+  }
+  
+  .desc-certificates {
+    font-size: 16px; /* Ukuran font */
+    line-height: 1.8; /* Jarak antar baris */
+    color: #fff; /* Warna teks */
+  }
+
+  .hight-name{
+    color: #FFEE8B;
+    font-weight: bold;
+  }
+  
+  /* Tambahkan Media Queries */
+  @media (max-width: 768px) {
+    .certificates-container {
+      flex-direction: column; /* Susun kolom untuk layar kecil */
+      align-items: center; /* Tengahkan isi */
+    }
+  
+    .certificates-left, .certificates-right {
+      max-width: 100%; /* Full width pada layar kecil */
+      padding: 10px; /* Tambah jarak */
+    }
+  
+    .desc-certificates {
+      font-size: 14px; /* Perkecil teks */
+      line-height: 1.6; /* Jarak antar baris lebih kecil */
+    }
+  
+    .certificates-left img {
+      max-height: 300px; /* Batasi tinggi gambar */
+    }
+  }
+
+  /* certificates two Section */
+  .certificates-two-section {
+    background-color: #213555; /* Warna latar belakang */
+    padding: 50px 20px; /* Padding luar */
+    color: #fff; /* Warna teks */
+  }
+  
+  .certificates-two-container {
+    display: flex; /* Layout baris */
+    flex-wrap: wrap; /* Supaya responsif jika layar kecil */
+    justify-content: center; /* Pusatkan isi */
+    align-items: center; /* Tengah vertikal */
+    max-width: 1400px; /* Batas lebar maksimum */
+    margin: 0 auto; /* Tengahkan kontainer */
+  }
+  
+  .certificates-two-left {
+    flex: 1; /* Bagian kiri mengambil 1 bagian */
+    max-width: 50%; /* Maksimal 50% lebar */
+    display: flex; /* Fleksibel agar konten rata tengah */
+    justify-content: center; /* Tengahkan horizontal */
+    align-items: center; /* Tengahkan vertikal */
+    padding: 10px;
+  }
+  
+  .certificates-two-left img {
+    width: auto; /* Mempertahankan proporsi gambar */
+    max-width: 100%; /* Responsif untuk lebar */
+    height: auto; /* Responsif untuk tinggi */
+    max-height: 600px; /* Sesuaikan tinggi gambar */
+    border-radius: 12px; /* Sudut melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+  }
+  
+  .certificates-two-right {
+    flex: 1; /* Bagian kanan mengambil 1 bagian */
+    max-width: 50%; /* Maksimal 50% lebar */
+    padding: 20px; /* Jarak dalam */
+    text-align: justify; /* Rata kanan-kiri */
+  }
+  
+  .desc-certificates-two {
+    font-size: 16px; /* Ukuran font */
+    line-height: 1.8; /* Jarak antar baris */
+    color: #fff; /* Warna teks */
+  }
+
+  .hight-name{
+    color: #FFEE8B;
+    font-weight: bold;
+  }
+  
+  /* Tambahkan Media Queries */
+  @media (max-width: 768px) {
+    .certificates-two-container {
+      flex-direction: column; /* Susun kolom untuk layar kecil */
+      align-items: center; /* Tengahkan isi */
+    }
+  
+    .certificates-two-left, .certificates-two-right {
+      max-width: 100%; /* Full width pada layar kecil */
+      padding: 10px; /* Tambah jarak */
+    }
+  
+    .desc-certificates-two {
+      font-size: 14px; /* Perkecil teks */
+      line-height: 1.6; /* Jarak antar baris lebih kecil */
+    }
+  
+    .certificates-two-left img {
+      max-height: 300px; /* Batasi tinggi gambar */
+    }
+  }
+
+  /* certificates three Section */
+  .certificates-three-section {
+    background-color: #3E5879; /* Warna latar belakang */
+    padding: 50px 20px; /* Padding luar */
+    color: #fff; /* Warna teks */
+  }
+  
+  .certificates-three-container {
+    display: flex; /* Layout baris */
+    flex-wrap: wrap; /* Supaya responsif jika layar kecil */
+    justify-content: center; /* Pusatkan isi */
+    align-items: center; /* Tengah vertikal */
+    max-width: 1400px; /* Batas lebar maksimum */
+    margin: 0 auto; /* Tengahkan kontainer */
+  }
+  
+  .certificates-three-left {
+    flex: 1; /* Bagian kiri mengambil 1 bagian */
+    max-width: 50%; /* Maksimal 50% lebar */
+    display: flex; /* Fleksibel agar konten rata tengah */
+    justify-content: center; /* Tengahkan horizontal */
+    align-items: center; /* Tengahkan vertikal */
+    padding: 10px;
+  }
+  
+  .certificates-three-left img {
+    width: auto; /* Mempertahankan proporsi gambar */
+    max-width: 100%; /* Responsif untuk lebar */
+    height: auto; /* Responsif untuk tinggi */
+    max-height: 600px; /* Sesuaikan tinggi gambar */
+    border-radius: 12px; /* Sudut melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+  }
+  
+  .certificates-three-right {
+    flex: 1; /* Bagian kanan mengambil 1 bagian */
+    max-width: 50%; /* Maksimal 50% lebar */
+    padding: 20px; /* Jarak dalam */
+    text-align: justify; /* Rata kanan-kiri */
+  }
+  
+  .desc-certificates-three {
+    font-size: 16px; /* Ukuran font */
+    line-height: 1.8; /* Jarak antar baris */
+    color: #fff; /* Warna teks */
+  }
+
+  .hight-name{
+    color: #FFEE8B;
+    font-weight: bold;
+  }
+  
+  /* Tambahkan Media Queries */
+  @media (max-width: 768px) {
+    .certificates-three-container {
+      flex-direction: column; /* Susun kolom untuk layar kecil */
+      align-items: center; /* Tengahkan isi */
+    }
+  
+    .certificates-three-left, .certificates-three-right {
+      max-width: 100%; /* Full width pada layar kecil */
+      padding: 10px; /* Tambah jarak */
+    }
+  
+    .desc-certificates-three {
+      font-size: 14px; /* Perkecil teks */
+      line-height: 1.6; /* Jarak antar baris lebih kecil */
+    }
+  
+    .certificates-three-left img {
+      max-height: 300px; /* Batasi tinggi gambar */
+    }
+  }
+
+  /* certificates four Section */
+  .certificates-four-section {
+    background-color: #213555; /* Warna latar belakang */
+    padding: 50px 20px; /* Padding luar */
+    color: #fff; /* Warna teks */
+  }
+  
+  .certificates-four-container {
+    display: flex; /* Layout baris */
+    flex-wrap: wrap; /* Supaya responsif jika layar kecil */
+    justify-content: center; /* Pusatkan isi */
+    align-items: center; /* Tengah vertikal */
+    max-width: 1400px; /* Batas lebar maksimum */
+    margin: 0 auto; /* Tengahkan kontainer */
+  }
+  
+  .certificates-four-left {
+    flex: 1; /* Bagian kiri mengambil 1 bagian */
+    max-width: 50%; /* Maksimal 50% lebar */
+    display: flex; /* Fleksibel agar konten rata tengah */
+    justify-content: center; /* Tengahkan horizontal */
+    align-items: center; /* Tengahkan vertikal */
+    padding: 10px;
+  }
+  
+  .certificates-four-left img {
+    width: auto; /* Mempertahankan proporsi gambar */
+    max-width: 100%; /* Responsif untuk lebar */
+    height: auto; /* Responsif untuk tinggi */
+    max-height: 600px; /* Sesuaikan tinggi gambar */
+    border-radius: 12px; /* Sudut melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+  }
+  
+  .certificates-four-right {
+    flex: 1; /* Bagian kanan mengambil 1 bagian */
+    max-width: 50%; /* Maksimal 50% lebar */
+    padding: 20px; /* Jarak dalam */
+    text-align: justify; /* Rata kanan-kiri */
+  }
+  
+  .desc-certificates-four {
+    font-size: 16px; /* Ukuran font */
+    line-height: 1.8; /* Jarak antar baris */
+    color: #fff; /* Warna teks */
+  }
+
+  .hight-name{
+    color: #FFEE8B;
+    font-weight: bold;
+  }
+  
+  /* Tambahkan Media Queries */
+  @media (max-width: 768px) {
+    .certificates-four-container {
+      flex-direction: column; /* Susun kolom untuk layar kecil */
+      align-items: center; /* Tengahkan isi */
+    }
+  
+    .certificates-four-left, .certificates-four-right {
+      max-width: 100%; /* Full width pada layar kecil */
+      padding: 10px; /* Tambah jarak */
+    }
+  
+    .desc-certificates-four {
+      font-size: 14px; /* Perkecil teks */
+      line-height: 1.6; /* Jarak antar baris lebih kecil */
+    }
+  
+    .certificates-four-left img {
+      max-height: 300px; /* Batasi tinggi gambar */
+    }
+  }
+
+  /* certificates five Section */
+  .certificates-five-section {
+    background-color: #3E5879; /* Warna latar belakang */
+    padding: 50px 20px; /* Padding luar */
+    color: #fff; /* Warna teks */
+  }
+  
+  .certificates-five-container {
+    display: flex; /* Layout baris */
+    flex-wrap: wrap; /* Supaya responsif jika layar kecil */
+    justify-content: center; /* Pusatkan isi */
+    align-items: center; /* Tengah vertikal */
+    max-width: 1400px; /* Batas lebar maksimum */
+    margin: 0 auto; /* Tengahkan kontainer */
+  }
+  
+  .certificates-five-left {
+    flex: 1; /* Bagian kiri mengambil 1 bagian */
+    max-width: 50%; /* Maksimal 50% lebar */
+    display: flex; /* Fleksibel agar konten rata tengah */
+    justify-content: center; /* Tengahkan horizontal */
+    align-items: center; /* Tengahkan vertikal */
+    padding: 10px;
+  }
+  
+  .certificates-five-left img {
+    width: auto; /* Mempertahankan proporsi gambar */
+    max-width: 100%; /* Responsif untuk lebar */
+    height: auto; /* Responsif untuk tinggi */
+    max-height: 600px; /* Sesuaikan tinggi gambar */
+    border-radius: 12px; /* Sudut melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+  }
+  
+  .certificates-five-right {
+    flex: 1; /* Bagian kanan mengambil 1 bagian */
+    max-width: 50%; /* Maksimal 50% lebar */
+    padding: 20px; /* Jarak dalam */
+    text-align: justify; /* Rata kanan-kiri */
+  }
+  
+  .desc-certificates-five {
+    font-size: 16px; /* Ukuran font */
+    line-height: 1.8; /* Jarak antar baris */
+    color: #fff; /* Warna teks */
+  }
+
+  .hight-name{
+    color: #FFEE8B;
+    font-weight: bold;
+  }
+  
+  /* Tambahkan Media Queries */
+  @media (max-width: 768px) {
+    .certificates-five-container {
+      flex-direction: column; /* Susun kolom untuk layar kecil */
+      align-items: center; /* Tengahkan isi */
+    }
+  
+    .certificates-five-left, .certificates-five-right {
+      max-width: 100%; /* Full width pada layar kecil */
+      padding: 10px; /* Tambah jarak */
+    }
+  
+    .desc-certificates-five {
+      font-size: 14px; /* Perkecil teks */
+      line-height: 1.6; /* Jarak antar baris lebih kecil */
+    }
+  
+    .certificates-five-left img {
+      max-height: 300px; /* Batasi tinggi gambar */
+    }
+  }
+
+  /* certificates six Section */
+  .certificates-six-section {
+    background-color: #213555; /* Warna latar belakang */
+    padding: 50px 20px; /* Padding luar */
+    color: #fff; /* Warna teks */
+  }
+  
+  .certificates-six-container {
+    display: flex; /* Layout baris */
+    flex-wrap: wrap; /* Supaya responsif jika layar kecil */
+    justify-content: center; /* Pusatkan isi */
+    align-items: center; /* Tengah vertikal */
+    max-width: 1400px; /* Batas lebar maksimum */
+    margin: 0 auto; /* Tengahkan kontainer */
+  }
+  
+  .certificates-six-left {
+    flex: 1; /* Bagian kiri mengambil 1 bagian */
+    max-width: 50%; /* Maksimal 50% lebar */
+    display: flex; /* Fleksibel agar konten rata tengah */
+    justify-content: center; /* Tengahkan horizontal */
+    align-items: center; /* Tengahkan vertikal */
+    padding: 10px;
+  }
+  
+  .certificates-six-left img {
+    width: auto; /* Mempertahankan proporsi gambar */
+    max-width: 100%; /* Responsif untuk lebar */
+    height: auto; /* Responsif untuk tinggi */
+    max-height: 600px; /* Sesuaikan tinggi gambar */
+    border-radius: 12px; /* Sudut melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+  }
+  
+  .certificates-six-right {
+    flex: 1; /* Bagian kanan mengambil 1 bagian */
+    max-width: 50%; /* Maksimal 50% lebar */
+    padding: 20px; /* Jarak dalam */
+    text-align: justify; /* Rata kanan-kiri */
+  }
+  
+  .desc-certificates-six {
+    font-size: 16px; /* Ukuran font */
+    line-height: 1.8; /* Jarak antar baris */
+    color: #fff; /* Warna teks */
+  }
+
+  .hight-name{
+    color: #FFEE8B;
+    font-weight: bold;
+  }
+  
+  /* Tambahkan Media Queries */
+  @media (max-width: 768px) {
+    .certificates-six-container {
+      flex-direction: column; /* Susun kolom untuk layar kecil */
+      align-items: center; /* Tengahkan isi */
+    }
+  
+    .certificates-six-left, .certificates-six-right {
+      max-width: 100%; /* Full width pada layar kecil */
+      padding: 10px; /* Tambah jarak */
+    }
+  
+    .desc-certificates-six {
+      font-size: 14px; /* Perkecil teks */
+      line-height: 1.6; /* Jarak antar baris lebih kecil */
+    }
+  
+    .certificates-six-left img {
+      max-height: 300px; /* Batasi tinggi gambar */
+    }
+  }
+
+  /* Section Contact */
+.contact-section {
+    background-color: #001E45; /* Warna latar belakang */
+    padding: 50px 20px;
+    color: #fff;
+  }
+  
+  .contact-container h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #FCC737; /* Warna judul */
+    text-align: center;
+    margin-bottom: 50px; /* Jarak bawah ke konten */
+  }
+  
+  /* Kontainer untuk Konten */
+  .contact-content {
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; /* Jarak antara kiri dan kanan */
+    max-width: 1380px;
+    margin: 0 auto;
+  }
+  
+  .contact-left,
+  .contact-right {
+    flex: 1;
+  }
+  
+  /* Gaya Konten Kiri */
+  .contact-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Jarak antar item */
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Jarak antara ikon dan teks */
+  }
+  
+  .contact-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+  
+  /* Gaya Konten Kanan */
+  .contact-right h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: right;
+  }
+  
+  .contact-right h5 {
+    text-align: right;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.6;
+  }
+  
+  /*Responsif contact*/
+  @media (max-width: 768px) {
+    .contact-content {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .contact-left, .contact-right {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+  
